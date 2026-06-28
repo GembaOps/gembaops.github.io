@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500" role="img" aria-label="GembaOps X banner">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;display=swap'); .wm{font-family:'Space Grotesk',sans-serif;font-weight:700} .tg{font-family:'Space Grotesk',sans-serif;font-weight:500}</style>
+  <rect width="1500" height="500" fill="#0f1b2d"/>
+  <g stroke="#f5a623" stroke-width="2" opacity="0.10">
+    <line x1="1120" y1="460" x2="1500" y2="460"/>
+    <line x1="1180" y1="390" x2="1500" y2="390"/>
+    <line x1="1240" y1="320" x2="1500" y2="320"/>
+    <line x1="1300" y1="250" x2="1500" y2="250"/>
+    <line x1="1260" y1="500" x2="1380" y2="230"/>
+    <line x1="1400" y1="500" x2="1470" y2="230"/>
+  </g>
+  <g transform="translate(110,170) scale(1.15)">
+    <path d="M50 130 C 27 98 16 86 16 52 A 34 34 0 1 1 84 52 C 84 86 73 98 50 130 Z" fill="#f5a623"/>
+    <line x1="31" y1="64" x2="69" y2="64" stroke="#0f1b2d" stroke-width="3" stroke-linecap="round"/>
+    <rect x="35" y="56" width="8" height="8" rx="1.5" fill="#0f1b2d"/>
+    <rect x="46" y="48" width="8" height="16" rx="1.5" fill="#0f1b2d"/>
+    <rect x="57" y="38" width="8" height="26" rx="1.5" fill="#0f1b2d"/>
+  </g>
+  <text x="240" y="240" class="wm" font-size="76" fill="#ffffff">Gemba<tspan fill="#f5a623">Ops</tspan></text>
+  <text x="244" y="294" class="tg" font-size="30" fill="#c4cedd">Automation, built on the floor.</text>
+</svg>

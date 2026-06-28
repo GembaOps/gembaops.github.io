@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="GembaOps — Automation, built on the floor.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1b2d"/>
+      <stop offset="0.6" stop-color="#16263d"/>
+      <stop offset="1" stop-color="#1b3050"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#f5a623"/>
+  <!-- mark -->
+  <g transform="translate(96,150) scale(1.25)">
+    <path d="M50 130 C 27 98 16 86 16 52 A 34 34 0 1 1 84 52 C 84 86 73 98 50 130 Z" fill="#f5a623"/>
+    <line x1="31" y1="64" x2="69" y2="64" stroke="#0f1b2d" stroke-width="3" stroke-linecap="round"/>
+    <rect x="35" y="56" width="8" height="8" rx="1.5" fill="#0f1b2d"/>
+    <rect x="46" y="48" width="8" height="16" rx="1.5" fill="#0f1b2d"/>
+    <rect x="57" y="38" width="8" height="26" rx="1.5" fill="#0f1b2d"/>
+  </g>
+  <text x="250" y="210" font-family="Space Grotesk, Segoe UI, sans-serif" font-weight="700" font-size="64" fill="#ffffff">Gemba<tspan fill="#f5a623">Ops</tspan></text>
+  <text x="252" y="252" font-family="Inter, Segoe UI, sans-serif" font-weight="500" font-size="24" fill="#c4cedd" letter-spacing="1">Automation, built on the floor.</text>
+  <text x="96" y="400" font-family="Space Grotesk, Segoe UI, sans-serif" font-weight="700" font-size="58" fill="#ffffff">Automate the manual work</text>
+  <text x="96" y="468" font-family="Space Grotesk, Segoe UI, sans-serif" font-weight="700" font-size="58" fill="#ffffff">that's eating your operations.</text>
+  <text x="96" y="540" font-family="Inter, Segoe UI, sans-serif" font-weight="400" font-size="26" fill="#8d99ab">Rule-based workflows + AI for manufacturers and distributors.</text>
+</svg>

@@ -1,0 +1,6 @@
+# Local-only — not part of the published site or repo
+_backup/
+.claude/
+*.py
+.DS_Store
+Thumbs.db

@@ -1,0 +1,12 @@
+# GitHub Pages config.
+# The site is plain static HTML (no Jekyll templating is used anywhere).
+# This file only keeps internal docs, backups, and tooling OUT of the published site,
+# while leaving them in the repo for delivery.
+exclude:
+  - README.md
+  - copy-deck.md
+  - implementation-guide.md
+  - qa-checklist.md
+  - _backup
+  - .claude
+  - "*.py"

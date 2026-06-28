@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 130" width="420" height="130" role="img" aria-label="GembaOps logo">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;display=swap'); .wm{font-family:'Space Grotesk',sans-serif;font-weight:700} .tg{font-family:'Space Grotesk',sans-serif;font-weight:500}</style>
+  <g transform="translate(8,14) scale(0.76)">
+    <path d="M50 130 C 27 98 16 86 16 52 A 34 34 0 1 1 84 52 C 84 86 73 98 50 130 Z" fill="#f5a623"/>
+    <line x1="31" y1="64" x2="69" y2="64" stroke="#0f1b2d" stroke-width="3" stroke-linecap="round"/>
+    <rect x="35" y="56" width="8" height="8" rx="1.5" fill="#0f1b2d"/>
+    <rect x="46" y="48" width="8" height="16" rx="1.5" fill="#0f1b2d"/>
+    <rect x="57" y="38" width="8" height="26" rx="1.5" fill="#0f1b2d"/>
+  </g>
+  <text x="108" y="64" class="wm" font-size="40" fill="#0f1b2d">Gemba<tspan fill="#f5a623">Ops</tspan></text>
+  <text x="110" y="90" class="tg" font-size="14" fill="#5b6678">Automation, built on the floor.</text>
+</svg>

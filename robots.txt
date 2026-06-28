@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /styleguide.html
+
+Sitemap: https://gembaops.com/sitemap.xml

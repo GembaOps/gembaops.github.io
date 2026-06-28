@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Guide &amp; Component Library | GembaOps</title>
+<meta name="description" content="GembaOps design system — colors, typography, and reusable components. Internal reference.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0f1b2d">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<noscript><nav aria-label="Primary" style="background:#0f1b2d;padding:12px 24px"><a href="/" style="color:#f5a623">Home</a></nav></noscript>
+
+<main id="main">
+  <header class="page-header">
+    <div class="wrap"><div class="inner">
+      <span class="eyebrow">Design system</span>
+      <h1>Style guide &amp; component library</h1>
+      <p>The living reference for the GembaOps site. This page replaces a static Figma file — every component below is the real, production code. Components marked “sample” are built but kept off live pages until real content exists.</p>
+    </div></div>
+  </header>
+
+  <div class="wrap">
+
+    <!-- COLOR -->
+    <div class="sg-section">
+      <h2>Color tokens</h2>
+      <p class="muted mb-3">CSS custom properties in <code>:root</code>. Contrast checked for WCAG AA on their intended backgrounds.</p>
+      <div class="swatches">
+        <div class="swatch"><div class="chip" style="background:#0f1b2d"></div><div class="meta"><b>Navy</b><br><code>--navy #0f1b2d</code></div></div>
+        <div class="swatch"><div class="chip" style="background:#16263d"></div><div class="meta"><b>Navy soft</b><br><code>--navy-soft #16263d</code></div></div>
+        <div class="swatch"><div class="chip" style="background:#0b1422"></div><div class="meta"><b>Navy deep</b><br><code>--navy-deep #0b1422</code></div></div>
+        <div class="swatch"><div class="chip" style="background:#1a2233"></div><div class="meta"><b>Ink</b><br><code>--ink #1a2233</code></div></div>
+        <div class="swatch"><div class="chip" style="background:#f5a623"></div><div class="meta"><b>Amber</b><br><code>--amber #f5a623</code></div></div>
+        <div class="swatch"><div class="chip" style="background:#d4881a"></div><div class="meta"><b>Amber deep</b><br><code>--amber-deep #d4881a</code></div></div>
+        <div class="swatch"><div class="chip" style="background:#1f9d6b"></div><div class="meta"><b>Success</b><br><code>--ok #1f9d6b</code></div></div>
+        <div class="swatch"><div class="chip" style="background:#5b6678"></div><div class="meta"><b>Slate 600</b><br><code>--slate-600 #5b6678</code></div></div>
+        <div class="swatch"><div class="chip" style="background:#c4cedd"></div><div class="meta"><b>Slate 300</b><br><code>--slate-300 #c4cedd</code></div></div>
+        <div class="swatch"><div class="chip" style="background:#f7f9fc;border-bottom:1px solid #e6e9ef"></div><div class="meta"><b>Slate 50</b><br><code>--slate-50 #f7f9fc</code></div></div>
+      </div>
+    </div>
+
+    <!-- TYPE -->
+    <div class="sg-section sg-type">
+      <h2>Typography</h2>
+      <p class="muted mb-3">Headings: <strong>Space Grotesk</strong> (self-hosted). Body: <strong>Inter</strong> (self-hosted). Fluid scale via <code>clamp()</code>.</p>
+      <div><h1 style="margin:0">Display / H1 — Space Grotesk 700</h1></div>
+      <div><h2 style="margin:0">Section / H2 — Space Grotesk 700</h2></div>
+      <div><h3 style="margin:0">Card / H3 — Space Grotesk 700</h3></div>
+      <div><p class="lead" style="margin:0">Lead paragraph — Inter, muted, used for intros.</p></div>
+      <div><p style="margin:0">Body copy — Inter 400 at 1.02rem, line-height 1.65, the workhorse text size.</p></div>
+      <div><span class="eyebrow">Eyebrow label — Space Grotesk, uppercase</span></div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="sg-section">
+      <h2>Buttons &amp; links</h2>
+      <p style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;background:#0f1b2d;padding:20px;border-radius:14px">
+        <a class="btn" href="#0">Primary</a>
+        <a class="btn btn-lg" href="#0">Primary large</a>
+        <a class="btn btn-ghost" href="#0">Ghost (on dark)</a>
+      </p>
+      <p style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:14px">
+        <a class="btn btn-outline" href="#0">Outline (on light)</a>
+        <a class="btn btn-arrow" href="#0">With arrow</a>
+        <a class="link-arrow" href="#0">Text link with arrow</a>
+      </p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="sg-section">
+      <h2>Cards &amp; feature grid</h2>
+      <div class="grid cols-3">
+        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12h18"/></svg></div><h3>Feature card</h3><p class="muted">Icon, title, supporting copy. Hover lift.</p><a class="link-arrow card-link" href="#0">Learn more</a></div>
+        <div class="card"><div class="num">01</div><h3>Numbered card</h3><p class="muted">For ordered lists like services.</p></div>
+        <div class="card dark"><h3>Dark card</h3><p>Inverted variant for navy sections.</p></div>
+      </div>
+    </div>
+
+    <!-- PROCESS -->
+    <div class="sg-section">
+      <h2>Process timeline</h2>
+      <div class="steps timeline">
+        <div class="step"><h4>Step one</h4><p class="muted">Auto-numbered via CSS counter.</p></div>
+        <div class="step"><h4>Step two</h4><p class="muted">Amber rule marks the timeline.</p></div>
+        <div class="step"><h4>Step three</h4><p class="muted">Three-up on desktop, stacks on mobile.</p></div>
+      </div>
+    </div>
+
+    <!-- STATS / DATAVIZ -->
+    <div class="sg-section">
+      <h2>Stats &amp; before/after chart</h2>
+      <div class="stats mb-3">
+        <div class="stat"><div class="big">−94%</div><div class="lbl">stat callout</div></div>
+        <div class="stat"><div class="big">2–6 wks</div><div class="lbl">stat callout</div></div>
+        <div class="stat"><div class="big">100%</div><div class="lbl">stat callout</div></div>
+        <div class="stat"><div class="big">$0</div><div class="lbl">stat callout</div></div>
+      </div>
+      <div class="ba-chart" style="max-width:520px">
+        <div class="ba-row"><span class="ba-name">Hours / week</span>
+          <div class="ba-bars">
+            <div class="ba-bar before"><span class="fill" style="width:100%"></span><span class="v">Before · 12</span></div>
+            <div class="ba-bar after"><span class="fill" style="width:10%"></span><span class="v">After · 1</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAIN -->
+    <div class="sg-section">
+      <h2>Pain-point list</h2>
+      <div class="pain-list" style="max-width:640px">
+        <div class="pain-item"><span class="x"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></span><div><h4>The problem statement</h4><p>Why it hurts.<span class="fix">The clean-logic or AI fix.</span></p></div></div>
+      </div>
+    </div>
+
+    <!-- ROI -->
+    <div class="sg-section">
+      <h2>ROI calculator</h2>
+      <p class="muted mb-3">Interactive component. Drop a <code>[data-roi]</code> block and load <code>roi-calculator.js</code>. Full markup lives on <a href="/pricing.html">pricing</a> and the <a href="/">home page</a>.</p>
+    </div>
+
+    <!-- ACCORDION -->
+    <div class="sg-section">
+      <h2>Accordion</h2>
+      <div class="accordion" style="margin:0">
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false" aria-controls="sg-acc1" id="sg-acc1-b">Accessible accordion item<svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="acc-panel" id="sg-acc1" role="region" aria-labelledby="sg-acc1-b"><div class="acc-inner">Keyboard-operable, ARIA-wired, animates max-height. Used for FAQ.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAROUSEL (sample, off live) -->
+    <div class="sg-section">
+      <h2>Testimonial carousel <span class="pill" style="background:var(--amber-soft);color:var(--amber-deep)">Built — off live until real</span></h2>
+      <div class="carousel" tabindex="0" aria-roledescription="carousel" aria-label="Sample testimonials">
+        <div class="carousel-track">
+          <div class="slide"><div class="quote"><blockquote>“Sample quote one — a real client testimonial with a <span class="metric">hard metric</span> goes here.”</blockquote><div class="cite"><b>Name, Title</b><span>Company</span></div></div></div>
+          <div class="slide"><div class="quote"><blockquote>“Sample quote two — kept off live pages until a real client provides one.”</blockquote><div class="cite"><b>Name, Title</b><span>Company</span></div></div></div>
+        </div>
+        <div class="carousel-nav" aria-label="Slide navigation"></div>
+      </div>
+    </div>
+
+    <!-- LOGO STRIP (sample, off live) -->
+    <div class="sg-section">
+      <h2>Partner / client logo strip <span class="pill" style="background:var(--amber-soft);color:var(--amber-deep)">Built — off live until real</span></h2>
+      <div class="logo-strip">
+        <span class="logo-ph">CLIENT LOGO</span><span class="logo-ph">CLIENT LOGO</span><span class="logo-ph">CLIENT LOGO</span><span class="logo-ph">CLIENT LOGO</span>
+      </div>
+    </div>
+
+    <!-- FORMS -->
+    <div class="sg-section">
+      <h2>Forms &amp; modal</h2>
+      <p class="muted mb-3">Form styles live in <code>.form</code> / <code>.field</code>. The demo-booking modal is injected on every page and opens from any <code>[data-open-modal]</code> element — e.g. <a href="#" data-open-modal>this link</a>. Consent banner appears bottom-center on first visit.</p>
+      <div class="form-card" style="max-width:480px">
+        <form class="form" onsubmit="return false" aria-label="Sample form">
+          <div class="field"><label>Field label <span class="req">*</span></label><input type="text" placeholder="Placeholder"></div>
+          <div class="field invalid"><label>Invalid state</label><input type="text" value="bad"><span class="err">Inline error message.</span></div>
+          <button class="btn btn-block" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div id="site-footer"></div>
+<script src="/assets/js/app.js" defer></script>
+</body>
+</html>
