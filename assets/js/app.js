@@ -11,12 +11,12 @@
      See implementation-guide.md. Placeholders are safe to ship —
      the booking modal shows an email/Calendly fallback until set. */
   var CONFIG = {
-    hubspotPortalId: "",                 // e.g. "44441234"
-    hubspotRegion: "na1",                // na1 / eu1
-    hubspotMeetingsUrl: "",              // e.g. "https://meetings.hubspot.com/frank/ops-audit"
+    hubspotPortalId: "246617744",
+    hubspotRegion: "na2",
+    hubspotMeetingsUrl: "https://meetings-na2.hubspot.com/frank-papaleo",
     calendlyFallback: "https://calendly.com/frankpapaleo76/free-operations-audit",
     contactEmail: "frank@gembaops.com",
-    cloudflareToken: ""                  // Cloudflare Web Analytics beacon token (cookieless)
+    cloudflareToken: ""                  // Cloudflare Web Analytics beacon token (cookieless) — add when ready
   };
   window.GEMBA_CONFIG = CONFIG;
 
@@ -125,7 +125,7 @@
   var lastFocus = null;
   function buildModal() {
     var embed = CONFIG.hubspotMeetingsUrl
-      ? '<div class="meetings-iframe-container" data-src="' + CONFIG.hubspotMeetingsUrl + '?embed=true"></div>'
+      ? '<div data-meetings-slot></div>'
       : '<div class="meetings-fallback"><p class="muted">Pick a time that works for you:</p>' +
         '<a class="btn btn-lg" href="' + CONFIG.calendlyFallback + '" target="_blank" rel="noopener">Open the booking calendar →</a></div>';
 
@@ -146,14 +146,21 @@
     return m;
   }
 
-  var meetingsLoaded = false;
-  function loadMeetingsScript() {
-    if (meetingsLoaded || !CONFIG.hubspotMeetingsUrl) return;
-    meetingsLoaded = true;
-    var s = document.createElement("script");
-    s.src = "https://static.hsappstatic.net/MeetingsEmbedCode/static-1/meetings-embed-code.js";
-    s.async = true;
-    document.body.appendChild(s);
+  // Inject the HubSpot scheduler as a direct iframe (no external embed script,
+  // so it renders reliably even inside a dynamically-opened modal). Lazy:
+  // called when the modal opens, and on the contact page at boot.
+  function injectMeetings(container) {
+    if (!container || !CONFIG.hubspotMeetingsUrl || container.querySelector("iframe")) return;
+    var f = document.createElement("iframe");
+    f.title = "Book a meeting with GembaOps";
+    f.src = CONFIG.hubspotMeetingsUrl + "?embed=true";
+    f.className = "meetings-frame";
+    f.loading = "lazy";
+    container.appendChild(f);
+  }
+
+  function wireInlineMeetings() {
+    injectMeetings(document.querySelector("[data-meetings-inline]"));
   }
 
   function openModal() {
@@ -163,7 +170,7 @@
     modal.hidden = false;
     modal.classList.add("open");
     document.body.style.overflow = "hidden";
-    loadMeetingsScript();
+    injectMeetings(modal.querySelector("[data-meetings-slot]"));
     var focusable = modal.querySelector("a,button,input");
     if (focusable) focusable.focus();
     document.addEventListener("keydown", onModalKey);
@@ -359,6 +366,7 @@
     if (headerSlot) headerSlot.replaceWith(buildHeader());
     if (footerSlot) footerSlot.replaceWith(buildFooter());
     document.body.appendChild(buildModal());
+    wireInlineMeetings();
     wireNav();
     wireGlobalClicks();
     wireAccordions();

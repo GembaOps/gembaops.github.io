@@ -392,7 +392,9 @@ footer .foot-tagline{color:var(--slate-400);max-width:34ch;font-size:.95rem;marg
 .modal-close:hover{background:var(--slate-200)}
 .modal-close svg{width:20px;height:20px;stroke:var(--ink)}
 .modal h2{margin-bottom:8px}
-.modal .meetings-embed{min-height:560px;margin-top:18px}
+.modal [data-meetings-slot]{margin-top:18px}
+.meetings-frame{width:100%;min-height:660px;border:0;display:block;border-radius:10px;background:#fff}
+@media(max-width:560px){.meetings-frame{min-height:560px}}
 .modal .meetings-fallback{margin-top:18px;text-align:center}
 
 /* ---------- 21) FORMS ---------- */
