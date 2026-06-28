@@ -73,47 +73,9 @@
           <h2 class="mb-2">Or send a message</h2>
           <p class="muted mb-3">Tell me a bit about your operation and I'll get back to you, usually within one business day.</p>
           <div class="form-card">
-            <form class="form" id="contact-form" novalidate aria-label="Contact form">
-              <div class="row">
-                <div class="field">
-                  <label for="c-name">Name <span class="req" aria-hidden="true">*</span></label>
-                  <input type="text" id="c-name" name="name" required autocomplete="name">
-                  <span class="err">Please enter your name.</span>
-                </div>
-                <div class="field">
-                  <label for="c-email">Work email <span class="req" aria-hidden="true">*</span></label>
-                  <input type="email" id="c-email" name="email" required autocomplete="email">
-                  <span class="err">Please enter a valid email.</span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="field">
-                  <label for="c-company">Company</label>
-                  <input type="text" id="c-company" name="company" autocomplete="organization">
-                </div>
-                <div class="field">
-                  <label for="c-role">Your role</label>
-                  <select id="c-role" name="role">
-                    <option value="">Select…</option>
-                    <option>Owner / President</option>
-                    <option>Operations Director / VP</option>
-                    <option>Plant / Production Manager</option>
-                    <option>IT / CIO</option>
-                    <option>Continuous improvement</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-              </div>
-              <div class="field">
-                <label for="c-message">What's eating your team's hours? <span class="req" aria-hidden="true">*</span></label>
-                <textarea id="c-message" name="message" required placeholder="e.g. Two people spend ~10 hrs/week building the weekly production report by hand."></textarea>
-                <span class="err">Please add a short note.</span>
-              </div>
-              <div class="hp" aria-hidden="true"><label>Leave this blank<input type="text" name="company_url" tabindex="-1" autocomplete="off"></label></div>
-              <button class="btn btn-block" type="submit">Send message</button>
-              <p class="form-note">By sending this you agree to our <a href="/privacy.html">privacy notice</a>. We'll only use your details to reply.</p>
-            </form>
-            <div class="form-success" id="contact-success">Thanks — your message is on its way. I'll reply within one business day. If your email client didn't open, reach me directly at <a href="mailto:frank@gembaops.com">frank@gembaops.com</a>.</div>
+            <!-- HubSpot form (lands directly in the CRM) -->
+            <div class="hs-form-frame" data-region="na2" data-form-id="67cac3a8-8d8a-471c-a4d4-e8651295fb36" data-portal-id="246617744"></div>
+            <p class="form-note mt-2">By submitting you agree to our <a href="/privacy.html">privacy notice</a>. Prefer email? <a href="mailto:frank@gembaops.com">frank@gembaops.com</a></p>
           </div>
         </div>
 
@@ -124,5 +86,6 @@
 
 <div id="site-footer"></div>
 <script src="/assets/js/app.js" defer></script>
+<script src="https://js-na2.hsforms.net/forms/embed/246617744.js" defer></script>
 </body>
 </html>

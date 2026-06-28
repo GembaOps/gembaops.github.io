@@ -108,7 +108,8 @@ section{padding:var(--section-y) 0}
 .bordered{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
 /* ---------- 5) TYPOGRAPHY ---------- */
-h1,h2,h3,h4,h5{font-family:var(--font-head);font-weight:700;line-height:1.12;color:var(--ink);letter-spacing:-.01em}
+h1,h2,h3,h4,h5{font-family:var(--font-head);font-weight:700;line-height:1.12;color:inherit;letter-spacing:-.01em}
+body{color:var(--ink)} /* default dark heading/text color on light backgrounds; dark sections set color:#fff so headings inherit white */
 .bg-navy h1,.bg-navy h2,.bg-navy h3,.bg-navy h4{color:#fff}
 h1{font-size:var(--fs-h1)}
 h2{font-size:var(--fs-h2)}
