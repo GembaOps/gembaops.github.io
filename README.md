@@ -73,14 +73,14 @@ Until HubSpot is set, the booking modal falls back to Calendly and the contact f
 
 ---
 
-## Deploy (GitHub Pages, like LIDM)
+## Deploy (LIVE — GitHub Pages)
 
-Short version (full steps + DNS in `implementation-guide.md`):
+**This folder IS the git repo.** It's already deployed and live at **https://gembaops.com** (HTTPS enforced).
 
-1. Create a GitHub repo for GembaOps and push the contents of this `website/` folder to `main`.
-2. Repo → **Settings → Pages** → deploy from `main` → set custom domain `gembaops.com` (the `CNAME` file is already here).
-3. In **Cloudflare DNS**, point the apex at GitHub Pages (4× A records `185.199.108–111.153`) + `CNAME www → <repo>.github.io`, **DNS-only**. Leave email (MX/SPF/DKIM) untouched.
-4. Enable **Enforce HTTPS** once the cert issues. (If it stalls, remove + re-add the custom domain in Pages settings.)
+- **Repo:** `https://github.com/GembaOps/gembaops.github.io` (remote `origin` is set; account: `LongIslandDungeonMaster` owns the `GembaOps` org).
+- **To deploy a change:** edit files here → `git push origin main`. GitHub Pages auto-rebuilds in ~1 min. That's it — no build step.
+- DNS lives on Cloudflare (apex + `www` CNAME → `gembaops.github.io`, DNS-only; email untouched). One-time infra steps + the cert-stall fix are documented in `implementation-guide.md`.
+- Windows/PowerShell note: `git push` prints progress to stderr so the tool shows a red `NativeCommandError` even on success — trust the `<old>..<new> main -> main` line. Avoid double-quotes in commit messages (breaks arg parsing).
 
 ---
 
